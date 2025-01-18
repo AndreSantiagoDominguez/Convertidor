@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e2a38; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e0e6ed; 
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    background: #243447; 
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Headers */
+  h1, h2 {
+    text-align: center;
+    color: #69b7f3;
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 2px solid #394a59; 
+    margin: 20px 0;
+  }
+  
+  /* Textareas */
+  textarea {
+    width: 98%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #3b5161; 
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    background-color: #2e3d4e; 
+    color: #e0e6ed; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  textarea[readonly] {
+    cursor: not-allowed;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #69b7f3;
+    color: #1e2a38; 
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #4c9dd9; 
+    transform: scale(1.05);
+  }
+  
+  /* Responsive buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Selectors */
+  .selectors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  label, select {
+    font-size: 16px;
+    color: #e0e6ed; 
+  }
+  
+  select {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #3b5161;
+    background-color: #2e3d4e; 
+    color: #e0e6ed; 
+    font-size: 16px;
+  }
+  
+  /* Notifications */
+  #notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .notification {
+    background-color: #69b7f3; 
+    color: #1e2a38;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease, fadeOut 0.5s ease 3.5s forwards;
+  }
+  
+  .notification.error {
+    background-color: #e74c3c; 
+    color: #fff;
+  }
+  
+  .notification .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    textarea {
+      height: 80px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .selectors {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    label, select {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
